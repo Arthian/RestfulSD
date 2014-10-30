@@ -131,14 +131,14 @@ EOT;
 
 // POST route
 $app->post(
-    '/post/:name',
+    '/post/:fistname',
     function ($name) {
-        echo 'This is a POST route $name';
+        echo "This is a POST route $name";
     }
 );
 
 // PUT route
-$app->get(
+$app->put(
     '/put',
     function () {
         echo 'This is a PUT route';
