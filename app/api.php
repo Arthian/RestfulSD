@@ -1,13 +1,15 @@
 
 <?php if(!defined("SPECIALCONSTANT")) die("Acceso denegado");
 
+
+
 $app->get("/book", function() use($app){
 
 	try{
 		$connection = getConnection();
 		$dbh = $connection->prepare("SELECT * FROM libro");
 		$dbh->execute();
-		$books = $dbh->fetchObject();
+		$books = $dbh->fetchAll();
 		$connection = null;
 
 		$app->response->headers->set("Content-type","application/json");

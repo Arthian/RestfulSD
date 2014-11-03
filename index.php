@@ -1,4 +1,10 @@
+<html>
+    
+
+</html>
+
 <?php
+
 
 require 'Slim/Slim.php';
 
