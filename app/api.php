@@ -10,6 +10,11 @@ $app->get("/book", function() use($app){
 		$dbh = $connection->prepare("SELECT * FROM libro");
 		$dbh->execute();
 		$books = $dbh->fetchAll();
+        foreach ($books as $row) {
+            $return[]=array('Titulo'=>$row['titulo'],
+                    'Autor'=>$row['autor'],
+                    'Isbn'=>$row['isbn']);
+        }
 		$connection = null;
 
 		$app->response->headers->set("Content-type","application/json");
