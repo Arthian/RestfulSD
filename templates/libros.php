@@ -10,10 +10,10 @@
 		<?php foreach ($libros as $key => $value): ?>
 			<div class="row">
 				<div class="col-md-8"><?php echo $value['titulo']." ".$value['autor']." ".$value['isbn']; ?></div>
-				<div class="col-md-4"><a href="edit/<?php echo $value['id'] ?>/usuario">Editar</a></div>
-				<div class="col-md-4"><a href="del/<?php echo $value['id'] ?>/usuario">Borrar</a></div>
+				<div class="col-md-4"><a href="index.php/editar/<?php echo $value['id'] ?>">Editar</a></div>
+				<div class="col-md-4"><a href="index.php/del/<?php echo $value['id'] ?>">Borrar</a></div>
 			</div>
 		<?php endforeach; ?>	 
-		<a href="nuevo">Agregar</a>
+		<a href="index.php/nuevo">Agregar</a>
 	</div>	
 </body>
